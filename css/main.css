@@ -176,38 +176,6 @@ body{
     text-decoration: none;
 }
 
-.clr-main{
-  color:#241639;
-}
-
-.clr-light{
-  color:#876eaf;
-}
-
-
-.banner{
-  margin-top:4.25em;
-  background: rgba(43,36,43,1);
-  background: -moz-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(43,36,43,1)), color-stop(50%, rgba(32,13,68,1)), color-stop(100%, rgba(39,48,55,1)));
-  background: -webkit-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
-  background: -o-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
-  background: -ms-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
-  background: linear-gradient(to right, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b242b', endColorstr='#273037', GradientType=1 );
-}
-
-
-h1,h2,h3,h4,h5,h6{
-  font-family: monty-reg,Arial,sans-serif;
-}
-
-p{
-  font-size:0.875em;
-  line-height:1.5rem;
-  font-family:varela,Arial,sans-serif;
-}
-
 .nav-padder{
   padding: 12px 1em;
 }
@@ -281,19 +249,91 @@ p{
 }
 #navbar_tab{
   height:0px;
+  width:100%;
+  max-height:auto;
   overflow:hidden;
   position: fixed;
   top:68px;
   right:0px;
+  z-index:99;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
 }
 #navbar_tab nav{
-  background-color:#ffffff;
-  width:auto;
+  width:100%;
   height:auto;
+  text-align:center;
+  background: rgba(43,36,43,1);
+  background: -moz-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(43,36,43,1)), color-stop(50%, rgba(32,13,68,1)), color-stop(100%, rgba(39,48,55,1)));
+  background: -webkit-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: -o-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: -ms-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: linear-gradient(to right, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b242b', endColorstr='#273037', GradientType=1 );  
+}
+#navbar_tab nav ul{
+    margin: 0;
+    padding: 0;
+}
+#navbar_tab nav ul li {
+    /* This allow us to arrange list items in a row, without using float */
+    list-style-type: none;
+}
+#navbar_tab nav > ul > li > a {
+    display: block;
+    min-width:140px;
+    font-size:1em;
+    font-family:monty-reg,Arial,sans-serif;
+    line-height: 2em;
+    padding: 0.5em 2em;
+    text-decoration: none;
+    color:#ffffff;
+    border-bottom:2px solid #876eaf;
+}
+#navbar_tab nav > ul > li:first-child > a {
+    border-top:2px solid #876eaf;
 }
 #navbar_tab.open{
-  height:auto;
+  height:500px;
 }
+
+.clr-main{
+  color:#241639;
+}
+
+.clr-light{
+  color:#876eaf;
+}
+
+
+.banner{
+  padding-top:4.25em;
+  background: rgba(43,36,43,1);
+  background: -moz-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(43,36,43,1)), color-stop(50%, rgba(32,13,68,1)), color-stop(100%, rgba(39,48,55,1)));
+  background: -webkit-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: -o-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: -ms-linear-gradient(left, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  background: linear-gradient(to right, rgba(43,36,43,1) 0%, rgba(32,13,68,1) 50%, rgba(39,48,55,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b242b', endColorstr='#273037', GradientType=1 );
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: monty-reg,Arial,sans-serif;
+}
+
+p{
+  font-size:0.875em;
+  line-height:1.5rem;
+  font-family:varela,Arial,sans-serif;
+}
+
+
+
 
 /* ==========================================================================
    Helper classes

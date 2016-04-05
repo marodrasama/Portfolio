@@ -24,27 +24,50 @@
         <div class="full-wd header">
           <div class="grid">
               <div class="row">
-                <div class="col-4 home-logo txt-lt">
-                  marodra
+                <div class="col-dsk-4 col-tab-8 col-mob-6 home-logo txt-lt">
+                  Maroodra
                 </div>
-                <div class="col-8 txt-rt">
+                <div class="col-dsk-8 show-dsk hide-mob hide-tab txt-rt" id="navbar_dsk">
                   <nav>
                     <ul>
                       <li><a href="work.html">work</a></li>
                       <li><a href="gallery.html">gallery</a></li>
-                      <li><a href="about.html">about</a></li>
-                      <li><a href="#">contact</a></li>
+                      <li><a href="#">about</a></li>
+                      <li><a href="contact.html">contact</a></li>
                     </ul>
                   </nav>
 
                 </div>
-              </div>  
+                <div class="col-tab-4 col-mob-6 show-tab show-mob hide-dsk txt-rt">
+                    <div class="nav-wrap txt-rt">
+                        <div id="nav-icon1">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                        </div>
+                    </div>
+                    
+                </div>
+              </div> 
+              
           </div>
         </div>
+        <div id="navbar_tab">
+            <nav class="show-tab show-mob hide-dsk float-right">
+                <ul>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>    
+        </div>
+        <div class="grid-wrap">
+        
         <div class="full-wd banner">
             <div class="grid">
-                <div class="col-dsk-6 col-dsk-offset-3 col-tab-8 col-tab-offset-2 col-mob-10 col-mob-offset-1 txt-md no-pad-bot">
-                    <img src="img/work_banner.png">
+                <div class="col-dsk-8 col-dsk-offset-2 col-tab-10 col-tab-offset-1 col-mob-12 col-mob-offset-0 txt-md no-pad-bot">
+                    <img src="img/contact_banner.png">
                 </div>
             </div>
         </div>
@@ -60,7 +83,7 @@
                 </div>
                 <div class="dvd-sm"></div>
                 <div class="col-dsk-6 col-dsk-offset-3 col-tab-10 col-tab-offset-1 col-mob-10 col-mob-offset-1 txt-md ">
-                    <p class="no-margin">If you wish to contact me and say hello or give me feedback you can reach me at me@syogesh.com. </p>
+                    <p class="no-margin">If you wish to contact me and say hello or give me feedback you can reach me at <b class="clr-light">me@syogesh.com</b>. </p>
                     <div class="dvd-xl"></div>
                     <a href="mailto:me@syogesh.com.com" class="icon-button">
                         CONTACT ME
@@ -69,18 +92,34 @@
             </div>
             <div class="dvd-xxl"></div>
         </div>
-        <div class="full-wd footer">
+        <div class="push"></div>
+        </div>
+
+
+        <footer class="full-wd footer">
             <div class="grid">
                 <div class="col-dsk-12 col-tab-12 col-mob-12 txt-md">
                     <p>© 2016 Marodra</p>
                 </div>
             </div>
-        </div>
+        </footer>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                $('#nav-icon1').click(function(){
+                    $(this).toggleClass('open');
+                    $('#navbar_tab').toggleClass('open');
+                    $('.banner').toggleClass('open');
+                });
+
+            });
+        </script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
