@@ -291,10 +291,10 @@ body{
     padding: 0.5em 2em;
     text-decoration: none;
     color:#ffffff;
-    border-bottom:2px solid #876eaf;
+    border-bottom:2px solid #c3afe7;
 }
 #navbar_tab nav > ul > li:first-child > a {
-    border-top:2px solid #876eaf;
+    border-top:2px solid #c3afe7;
 }
 #navbar_tab.open{
   height:500px;
@@ -425,6 +425,9 @@ p{
 @media only screen and (max-width: 40.063em){
   .home-logo{
     line-height:2.8rem;
+  }
+  #navbar_tab{
+    margin-top:8px;
   }
 
 }
