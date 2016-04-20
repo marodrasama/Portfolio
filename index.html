@@ -14,8 +14,13 @@
         <link rel="stylesheet" href="css/greezy.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/TweenLite.min.js"></script>
+        <script src="js/TimelineLite.min.js"></script>
+        <script src="js/EasePack.min.js"></script>
+        <script src="js/CSSPlugin.min.js"></script>
     </head>
-    <body>
+    <body onscroll="scrollAnimation()">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -65,8 +70,21 @@
 
         <div class="full-wd banner">
             <div class="grid">
-                <div class="col-dsk-12 col-tab-12 col-mob-12txt-md">
-                    <img src="img/banner.png">
+                <div class="row">
+                    <div class="col-dsk-12 anim-top-5 no-pad ">
+                        <img src="img/top_5.png">
+                    </div>
+                    <div class="col-dsk-12 anim-top-4 no-pad absoluter">
+                        <img src="img/top_4.png">
+                    </div>
+                    <div class="col-dsk-12 anim-top-3 no-pad absoluter">
+                        <img src="img/top_3.png">
+                    </div>
+                    <div class="col-dsk-12 anim-top-2 no-pad absoluter">
+                        <img src="img/top_2.png">
+                    </div>
+                    <div class="col-dsk-12 anim-top-1 no-pad absoluter">
+                        <img src="img/top_1.png" class="rlt">
                 </div>
             </div>
         </div>

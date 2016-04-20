@@ -41,3 +41,35 @@ function hasScrolled() {
        lastScrollTop = st;
     });
 }
+
+
+var hd_elt_1 = document.getElementsByClassName('anim-top-1');
+var hd_elt_2 = document.getElementsByClassName('anim-top-2');
+var hd_elt_3 = document.getElementsByClassName('anim-top-3');
+var hd_elt_4 = document.getElementsByClassName('anim-top-4');
+var hd_elt_5 = document.getElementsByClassName('anim-top-5');
+
+
+var header_tl = new TimelineLite();
+var header_tl_2 = new TimelineLite();
+var header_tl_3 = new TimelineLite();
+
+header_tl.from(hd_elt_1 , 0.1, {y:100})
+       .from(hd_elt_2, 0.7, {y:100, opacity:0}, '-=0.2')
+       .from(hd_elt_3, 0.7, {y:100, opacity:0}, '-=0.2')
+       .from(hd_elt_4, 0.7, {y:100, opacity:0}, '-=0.2')
+       .from(hd_elt_5, 0.7, {y:100, opacity:0}, '-=0.2');
+
+
+function scrollAnimation() {
+  var m = 0.8; //device dependent slope???
+  var t = m*window.scrollY;
+
+    header_tl_2.to(hd_elt_1 , 0, {y:-t})
+   .to(hd_elt_2, 0, {y:-t*0.75})
+   .to(hd_elt_3, 0, {y:-t*0.5})
+   .to(hd_elt_4, 0, {y:-t*0.25})
+   .to(hd_elt_5, 0, {y:-t*0.125});
+  
+  console.log(t);
+}
